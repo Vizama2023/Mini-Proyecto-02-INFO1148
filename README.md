@@ -1,4 +1,4 @@
-# ⚙️ Mini Proyecto #2 INFO1148: Generador Automático de Casos de Prueba (GLC)
+# Mini Proyecto #2 INFO1148: Generador Automático de Casos de Prueba (GLC)
 
 ## Descripción General
 Este proyecto consiste en el desarrollo de un Generador Automático de Casos de Prueba para expresiones aritméticas. La herramienta utiliza una Gramática Libre de Contexto (GLC) como base para generar sistemáticamente casos de prueba de tres categorías: **Válidos, Inválidos y Extremos (Límite)**.
@@ -26,6 +26,14 @@ La aplicación, implementada en Python con interfaz gráfica Tkinter, cumple con
 2.  Ejecute `python interfaz.py` en la terminal.
 3.  Cargue el archivo `gramatica.txt` en la interfaz.
 4.  Configure los parámetros y haga clic en "GENERAR CASOS".
+## 👥 Equipo de Desarrollo
 
+Este proyecto fue desarrollado por:
+
+| Nombre del Estudiante | Rol Sugerido / Contribución |
+| :--- | :--- |
+| **Debora Vizama** | Liderazgo, Diseño de Interfaz y Lógica del Generador |
+| **Cristobal Pichara** | Desarrollo de la Lógica de Derivación y Mutación |
+| **Cristobal Medel** | Análisis de Métricas y Documentación Técnica |
 ---
 *Desarrollado para el curso INFO1148 - Teoría de la Computación.*
