@@ -26,13 +26,13 @@ La aplicación, implementada en Python con interfaz gráfica Tkinter, cumple con
 2.  Ejecute `python interfaz.py` en la terminal.
 3.  Cargue el archivo `gramatica.txt` en la interfaz.
 4.  Configure los parámetros y haga clic en "GENERAR CASOS".
-## 👥 Equipo de Desarrollo
+## Equipo de Desarrollo
 
 Este proyecto fue desarrollado por:
 
 | Nombre del Estudiante | Rol Sugerido / Contribución |
 | :--- | :--- |
-| **Debora Vizama** | Liderazgo, Diseño de Interfaz y Lógica del Generador |
+| **Debora Vizama** |  Diseño de Interfaz y Lógica del Generador |
 | **Cristobal Pichara** | Desarrollo de la Lógica de Derivación y Mutación |
 | **Cristobal Medel** | Análisis de Métricas y Documentación Técnica |
 ---
