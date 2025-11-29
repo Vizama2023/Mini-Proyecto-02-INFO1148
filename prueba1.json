@@ -1,0 +1,462 @@
+[
+    {
+        "id": 1,
+        "tipo": "invalida",
+        "cadena": "id * id - NULL ( num ) ) + num - num",
+        "detalle_generacion": "reemplazar",
+        "metricas": {
+            "longitud_tokens": 13,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 2,
+                "*": 1,
+                "/": 0
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": false,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 2,
+        "tipo": "valida",
+        "cadena": "id * id + id * num - ( id ) * id - id / ( num ) / num * id * id",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 25,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 2,
+                "*": 5,
+                "/": 2
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 3,
+        "tipo": "invalida",
+        "cadena": "( ( ( id ) ) ) / ( id ) * id + id / ( num num ) / id / ( num - ( id ) ) + ( num )",
+        "detalle_generacion": "duplicar",
+        "metricas": {
+            "longitud_tokens": 34,
+            "profundidad_estimada": 3,
+            "conteo_operadores": {
+                "+": 2,
+                "-": 1,
+                "*": 1,
+                "/": 4
+            },
+            "nivel_anidamiento": 3
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": true
+        }
+    },
+    {
+        "id": 4,
+        "tipo": "invalida",
+        "cadena": "id - ?? / ( id - num - num )",
+        "detalle_generacion": "reemplazar",
+        "metricas": {
+            "longitud_tokens": 11,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 3,
+                "*": 0,
+                "/": 1
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 5,
+        "tipo": "valida",
+        "cadena": "id * ( num ) * id / id + num",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 11,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 0,
+                "*": 2,
+                "/": 1
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 6,
+        "tipo": "valida",
+        "cadena": "( num - ( ( num ) ) ) * ( num )",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 13,
+            "profundidad_estimada": 3,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 1,
+                "*": 1,
+                "/": 0
+            },
+            "nivel_anidamiento": 3
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 7,
+        "tipo": "extrema",
+        "cadena": "num - id * id - ( ( num ) * num + num * ( id ) / ( id + id ) / ( id + num + num ) + num / num / ( num - ( ( num ) ) * num + ( num",
+        "detalle_generacion": "longitud",
+        "metricas": {
+            "longitud_tokens": 50,
+            "profundidad_estimada": 4,
+            "conteo_operadores": {
+                "+": 6,
+                "-": 3,
+                "*": 4,
+                "/": 4
+            },
+            "nivel_anidamiento": 4
+        },
+        "clasificacion": {
+            "tipo_declarado": "extrema",
+            "parentesis_balanceados": false,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": true
+        }
+    },
+    {
+        "id": 8,
+        "tipo": "extrema",
+        "cadena": "id * ( ( ( ( ( ( num ) ) ) - num - id / id ) * ( ( id ) ) - id * id - num * ( id * ( ( num ) ) / ( num ) + id / num + id",
+        "detalle_generacion": "profundidad",
+        "metricas": {
+            "longitud_tokens": 50,
+            "profundidad_estimada": 6,
+            "conteo_operadores": {
+                "+": 2,
+                "-": 4,
+                "*": 5,
+                "/": 3
+            },
+            "nivel_anidamiento": 6
+        },
+        "clasificacion": {
+            "tipo_declarado": "extrema",
+            "parentesis_balanceados": false,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": true
+        }
+    },
+    {
+        "id": 9,
+        "tipo": "invalida",
+        "cadena": "id * num / id / ( num + num / id",
+        "detalle_generacion": "eliminar",
+        "metricas": {
+            "longitud_tokens": 12,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 0,
+                "*": 1,
+                "/": 3
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": false,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 10,
+        "tipo": "invalida",
+        "cadena": "num / ( ( id ) / id id )",
+        "detalle_generacion": "duplicar",
+        "metricas": {
+            "longitud_tokens": 10,
+            "profundidad_estimada": 2,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 0,
+                "*": 0,
+                "/": 2
+            },
+            "nivel_anidamiento": 2
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 11,
+        "tipo": "extrema",
+        "cadena": "num * ( id * id ) * id / id - id + ( num * num * id * ( id + num + num / num * ( num * ( id ) - ( ( id ) ) - num ) ) * num / (",
+        "detalle_generacion": "profundidad",
+        "metricas": {
+            "longitud_tokens": 50,
+            "profundidad_estimada": 5,
+            "conteo_operadores": {
+                "+": 3,
+                "-": 3,
+                "*": 9,
+                "/": 3
+            },
+            "nivel_anidamiento": 5
+        },
+        "clasificacion": {
+            "tipo_declarado": "extrema",
+            "parentesis_balanceados": false,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": true
+        }
+    },
+    {
+        "id": 12,
+        "tipo": "valida",
+        "cadena": "id + num / id",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 5,
+            "profundidad_estimada": 0,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 0,
+                "*": 0,
+                "/": 1
+            },
+            "nivel_anidamiento": 0
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 13,
+        "tipo": "valida",
+        "cadena": "id + ( num - num + ( ( ( id ) ) ) * num )",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 17,
+            "profundidad_estimada": 4,
+            "conteo_operadores": {
+                "+": 2,
+                "-": 1,
+                "*": 1,
+                "/": 0
+            },
+            "nivel_anidamiento": 4
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 14,
+        "tipo": "valida",
+        "cadena": "( num ) / id * ( id / ( num ) )",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 13,
+            "profundidad_estimada": 2,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 0,
+                "*": 1,
+                "/": 2
+            },
+            "nivel_anidamiento": 2
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 15,
+        "tipo": "valida",
+        "cadena": "id * id / id * num / num",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 9,
+            "profundidad_estimada": 0,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 0,
+                "*": 2,
+                "/": 2
+            },
+            "nivel_anidamiento": 0
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 16,
+        "tipo": "invalida",
+        "cadena": "( id ) * id * id + id / ( num * NULL )",
+        "detalle_generacion": "reemplazar",
+        "metricas": {
+            "longitud_tokens": 15,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 0,
+                "*": 3,
+                "/": 1
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 17,
+        "tipo": "invalida",
+        "cadena": "( num + ) / id",
+        "detalle_generacion": "eliminar",
+        "metricas": {
+            "longitud_tokens": 6,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 1,
+                "-": 0,
+                "*": 0,
+                "/": 1
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 18,
+        "tipo": "valida",
+        "cadena": "num * num - ( id / num )",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 9,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 1,
+                "*": 1,
+                "/": 1
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 19,
+        "tipo": "invalida",
+        "cadena": "id * num / ( id ) * / id",
+        "detalle_generacion": "eliminar",
+        "metricas": {
+            "longitud_tokens": 10,
+            "profundidad_estimada": 1,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 0,
+                "*": 2,
+                "/": 2
+            },
+            "nivel_anidamiento": 1
+        },
+        "clasificacion": {
+            "tipo_declarado": "invalida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    },
+    {
+        "id": 20,
+        "tipo": "valida",
+        "cadena": "id * id / id",
+        "detalle_generacion": "derivacion_directa",
+        "metricas": {
+            "longitud_tokens": 5,
+            "profundidad_estimada": 0,
+            "conteo_operadores": {
+                "+": 0,
+                "-": 0,
+                "*": 1,
+                "/": 1
+            },
+            "nivel_anidamiento": 0
+        },
+        "clasificacion": {
+            "tipo_declarado": "valida",
+            "parentesis_balanceados": true,
+            "contiene_tokens_invalidos": true,
+            "es_extremo": false
+        }
+    }
+]
